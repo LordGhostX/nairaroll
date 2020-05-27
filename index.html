@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NairaRoll | Online Dice Gaming Platform | Roll Dice to win money</title>
+    <!-- site favicon -->
+    <link rel="shortcut icon" type="image/png" href="assets/images/favicon.jpg">
+    <!-- fontawesome css link -->
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <!-- bootstrap css link -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- animate css link -->
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <!-- lightcase css link -->
+    <link rel="stylesheet" href="assets/css/lightcase.css">
+    <!-- slick css link -->
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <!-- swiper css link -->
+    <link rel="stylesheet" href="assets/css/swiper.min.css">
+    <!-- flipclock css link -->
+    <link rel="stylesheet" href="assets/css/flipclock.css">
+    <!-- main style css link -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- dark version css -->
+    <link rel="stylesheet" href="assets/css/dark-version.css">
+    <!-- responsive css link -->
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- preloader start -->
+  <div id="preloader"></div>
+  <!-- preloader end -->
+
+  <div class="main-dark-version">
+    <!--  header-section start  -->
+    <header class="header-section">
+      <div class="header-bottom">
+        <div class="container">
+          <nav class="navbar navbar-expand-xl">
+            <a class="site-logo site-title" href="#">NairaRoll</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="menu-toggle"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav main-menu ml-auto">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">How It works</a></li>
+                <li><a href="#">Results</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+              <div class="header-join-part">
+                <button type="button" class="cmn-btn" data-toggle="modal" data-target="#loginModal">join us</button>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div><!-- header-bottom end -->
+    </header>
+    <!--  header-section end  -->
+
+    <!--login registration Modal -->
+    <div class="modal fade login-registration-modal" id="loginModal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content row" style="width: auto">
+          <div class="modal-body">
+            <div class="login-registration-area">
+              <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" id="login-tab" data-toggle="tab" href="#login" role="tab" aria-controls="login" aria-selected="true">Login</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="registration-tab" data-toggle="tab" href="#registration" role="tab" aria-controls="registration" aria-selected="false">Register</a>
+                </li>
+              </ul>
+              <div class="tab-content">
+                <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+                  <form class="login-form cmn-frm">
+                    <div class="frm-group">
+                      <label>Email Address</label>
+                      <input type="email" name="login_email" id="login_email" placeholder="Enter Email Address">
+                      <i class="fa fa-user"></i>
+                    </div>
+                    <div class="frm-group">
+                      <label>Password</label>
+                      <input type="password" name="login_pass" id="login_pass" placeholder="Enter Password">
+                      <i class="fa fa-lock"></i>
+                    </div>
+                    <div class="frm-group">
+                      <input type="submit" name="registration_submit2" id="registration_submit2" value="login">
+                    </div>
+                    <div class="frm-group" align="center">
+                        <a style="color: #000" id="reset-tab" data-toggle="tab" href="#reset" role="tab" aria-controls="reset" aria-selected="false">Forgot Password?</a>
+                    </div>
+                  </form>
+                </div>
+                <div class="tab-pane fade" id="registration" role="tabpanel" aria-labelledby="registration-tab">
+                  <form class="registration-form cmn-frm">
+                    <div class="frm-group">
+                      <label>Email Address</label>
+                      <input type="email" name="registration_email" id="registration_email" placeholder="Enter Email Address">
+                      <i class="fa fa-user"></i>
+                    </div>
+                    <div class="frm-group">
+                      <label>Password</label>
+                      <input type="password" name="registration_pass" id="registration_pass" placeholder="Enter Password">
+                      <i class="fa fa-lock"></i>
+                    </div>
+                    <div class="frm-group">
+                      <label>Confirm Password</label>
+                      <input type="password" name="registration_re_pass" id="registration_re_pass" placeholder="Enter Password Confirmation">
+                      <i class="fa fa-lock"></i>
+                    </div>
+                    <div class="frm-group">
+                      <input type="submit" name="registration_submit" id="registration_submit" value="Register">
+                    </div>
+                  </form>
+                </div>
+                <div class="tab-pane fade" id="reset" role="tabpanel" aria-labelledby="forgot-tab">
+                  <form class="registration-form cmn-frm">
+                    <div class="frm-group">
+                      <label>Email Address</label>
+                      <input type="email" name="registration_email" id="registration_email" placeholder="Enter Email Address">
+                      <i class="fa fa-user"></i>
+                    </div>
+                    <div class="frm-group">
+                      <input type="submit" name="reset_submit" id="reset_submit" value="Reset Password">
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- banner-section start -->
+    <section class="banner-section">
+      <div class="banner-elements-part has_bg_image" data-background="assets/images/banner-net.png">
+        <div class="element-one"><img src="assets/images/elements/box.png" alt="vector-image"></div>
+
+        <div class="element-two"><img src="assets/images/elements/car.png" alt="vector-image"></div>
+
+        <div class="element-three"><img src="assets/images/elements/chart.png" alt="vector-image"></div>
+
+        <div class="element-four"><img src="assets/images/elements/dollars.png" alt="vector-image"></div>
+
+        <div class="element-five"><img src="assets/images/elements/laptop.png" alt="vector-image"></div>
+
+        <div class="element-six"><img src="assets/images/elements/money-2.png" alt="vector-image"></div>
+
+        <div class="element-seven"><img src="assets/images/elements/person.png" alt="vector-image"></div>
+
+        <div class="element-eight"><img src="assets/images/elements/person-2.png" alt="vector-image"></div>
+
+        <div class="element-nine"><img src="assets/images/elements/power.png" alt="vector-image"></div>
+      </div>
+      <div class="banner-content-area">
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-6">
+                      <div class="banner-content">
+                          <h1 class="title">Welcome to NairaRoll 🎲🤑🎉</h1>
+                          <p>NairaRoll is an online dice gaming platform that allows you make money by rolling dice. Yes It's that simple. You get paid for rolling dice 🎲🎲🎲</p>
+                          <a href="#" class="cmn-btn">Start Winning Now 🤑</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </section>
+    <!-- banner-section end -->
+
+    <!-- jackpot-section start -->
+    <section class="jackpot-section section-padding">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <div class="section-header text-center">
+              <h2 class="section-title">Game Modes</h2>
+              <p>NairaRoll offers multiple game modes so users have a variety of ways to enjoy their games</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <div class="jackpot-item text-center">
+              <span class="amount">Lone Ranger</span>
+              <h5 class="title">In this mode, you play dice against the NairaRoll platform. No delays, No waiting for other players.</h5>
+              <a href="#" class="cmn-btn">play now!</a>
+            </div>
+          </div><!-- jackpot-item end -->
+          <div class="col-lg-4 col-md-6">
+            <div class="jackpot-item text-center">
+              <span class="amount">Community Game</span>
+              <h5 class="title">In this mode, you play against other random players on the platform. A game is started when a set of players is ready. A set = 10 players.</h5>
+              <a href="#" class="cmn-btn">play now!</a>
+            </div>
+          </div><!-- jackpot-item end -->
+          <div class="col-lg-4 col-md-6">
+            <div class="jackpot-item text-center">
+              <span class="amount">Group of Friends</span>
+              <h5 class="title">In this mode, you play against your friends. You create a game and invite friends to join. There is no limit to how much can be won and number of players in this mode.</h5>
+              <a href="#" class="cmn-btn">play now!</a>
+            </div>
+          </div><!-- jackpot-item end -->
+        </div>
+      </div>
+    </section>
+    <!-- jackpot-section start -->
+
+    <!-- lottery-result-section start -->
+    <section class="lottery-result-section section-padding has_bg_image" data-background="assets/images/dark-bg-one.jpg">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-7">
+            <div class="section-header text-center">
+              <h2 class="section-title">Latest NairaRoll Game Results</h2>
+              <p>Here are the most recent Community Game Mode games played on NairaRoll</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="lottery-winning-num-part">
+              <div class="lottery-winning-num-table">
+                <h3 class="block-title">Recent NairaRoll Games</h3>
+                <div class="lottery-winning-table">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th class="name">Game ID</th>
+                        <th>Date</th>
+                        <th>Winner</th>
+                        <th>Total Game Amount</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><span>#8</span></td>
+                        <td><span>22/04/2020</span></td>
+                        <td><span>John Smith</span></td>
+                        <td><span>#10,000</span></td>
+                      </tr>
+                      <tr>
+                        <td><span>#7</span></td>
+                        <td><span>22/04/2020</span></td>
+                        <td><span>John Smith</span></td>
+                        <td><span>#10,000</span></td>
+                      </tr>
+                      <tr>
+                        <td><span>#6</span></td>
+                        <td><span>22/04/2020</span></td>
+                        <td><span>John Smith</span></td>
+                        <td><span>#10,000</span></td>
+                      </tr>
+                      <tr>
+                        <td><span>#5</span></td>
+                        <td><span>22/04/2020</span></td>
+                        <td><span>John Smith</span></td>
+                        <td><span>#10,000</span></td>
+                      </tr>
+                      <tr>
+                        <td><span>#4</span></td>
+                        <td><span>22/04/2020</span></td>
+                        <td><span>John Smith</span></td>
+                        <td><span>#10,000</span></td>
+                      </tr>
+                      <tr>
+                        <td><span>#3</span></td>
+                        <td><span>22/04/2020</span></td>
+                        <td><span>John Smith</span></td>
+                        <td><span>#10,000</span></td>
+                      </tr>
+                      <tr>
+                        <td><span>#2</span></td>
+                        <td><span>22/04/2020</span></td>
+                        <td><span>John Smith</span></td>
+                        <td><span>#10,000</span></td>
+                      </tr>
+                      <tr>
+                        <td><span>#1</span></td>
+                        <td><span>22/04/2020</span></td>
+                        <td><span>John Smith</span></td>
+                        <td><span>#10,000</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="winner-part">
+              <h3 class="block-title">Top Winners</h3>
+              <p>Here are our top winners in the last 24 hours</p>
+              <div class="winner-list">
+                <div class="winner-single">
+                  <div class="winner-header"><img src="assets/images/flag/1.jpg" alt="flag"><span class="name">John Smith</span></div>
+                  <h5 class="prize-amount">#50,000</h5>
+                </div><!-- winner-single end -->
+                <div class="winner-single">
+                  <div class="winner-header"><img src="assets/images/flag/2.jpg" alt="flag"><span class="name">John Smith</span></div>
+                  <h5 class="prize-amount">#50,000</h5>
+                </div><!-- winner-single end -->
+                <div class="winner-single">
+                  <div class="winner-header"><img src="assets/images/flag/3.jpg" alt="flag"><span class="name">John Smith</span></div>
+                  <h5 class="prize-amount">#50,000</h5>
+                </div><!-- winner-single end -->
+                <div class="winner-single">
+                  <div class="winner-header"><img src="assets/images/flag/4.jpg" alt="flag"><span class="name">John Smith</span></div>
+                  <h5 class="prize-amount">#50,000</h5>
+                </div><!-- winner-single end -->
+                <div class="winner-single">
+                  <div class="winner-header"><img src="assets/images/flag/5.jpg" alt="flag"><span class="name">John Smith</span></div>
+                  <h5 class="prize-amount">#50,000</h5>
+                </div><!-- winner-single end -->
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-12 text-center">
+            <a href="#" class="text-btn">see all game result</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- lottery-result-section end -->
+
+    <!-- choose-us-section start -->
+    <section class="choose-us-section section-padding">
+      <div class="choose-us-image"><img src="assets/images/elements/mouse.png" alt="image"></div>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <div class="section-header text-center">
+              <h2 class="section-title">Why Choose Us?</h2>
+              <p>NairaRoll makes playing dice easy, fun and rewarding.</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-9">
+            <div class="row mt-mb-15">
+              <div class="col-lg-4 col-sm-6">
+                <div class="choose-item text-center">
+                  <div class="front">
+                    <div class="icon">
+                      <img src="assets/images/svg-icons/choose-us-icons/1.svg" alt="icon"></div>
+                    <h4 class="title">Biggest dice jackpots</h4>
+                  </div>
+                  <div class="back">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  </div>
+                </div>
+              </div><!-- choose-item end -->
+              <div class="col-lg-4 col-sm-6">
+                <div class="choose-item text-center">
+                  <div class="front">
+                    <div class="icon">
+                      <img src="assets/images/svg-icons/choose-us-icons/2.svg" alt="icon"></div>
+                    <h4 class="title">No commission on Winnings</h4>
+                  </div>
+                  <div class="back">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  </div>
+                </div>
+              </div><!-- choose-item end -->
+              <div class="col-lg-4 col-sm-6">
+                <div class="choose-item text-center">
+                  <div class="front">
+                    <div class="icon">
+                      <img src="assets/images/svg-icons/choose-us-icons/3.svg" alt="icon">
+                    </div>
+                    <h4 class="title"> Safe and Secure Playing</h4>
+                  </div>
+                  <div class="back">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  </div>
+                </div>
+              </div><!-- choose-item end -->
+              <div class="col-lg-4 col-sm-6">
+                <div class="choose-item text-center">
+                  <div class="front">
+                    <div class="icon">
+                      <img src="assets/images/svg-icons/choose-us-icons/4.svg" alt="icon">
+                    </div>
+                    <h4 class="title">Instant payout system</h4>
+                  </div>
+                  <div class="back">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  </div>
+                </div>
+              </div><!-- choose-item end -->
+              <div class="col-lg-4 col-sm-6">
+                <div class="choose-item text-center">
+                  <div class="front">
+                    <div class="icon">
+                      <img src="assets/images/svg-icons/choose-us-icons/5.svg" alt="icon">
+                    </div>
+                    <h4 class="title">Performance Bonuses</h4>
+                  </div>
+                  <div class="back">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  </div>
+                </div>
+              </div><!-- choose-item end -->
+              <div class="col-lg-4 col-sm-6">
+                <div class="choose-item text-center">
+                  <div class="front">
+                    <div class="icon">
+                      <img src="assets/images/svg-icons/choose-us-icons/6.svg" alt="icon">
+                    </div>
+                    <h4 class="title">Dedicated Support</h4>
+                  </div>
+                  <div class="back">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  </div>
+                </div>
+              </div><!-- choose-item end -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- choose-us-section end -->
+
+    <!-- work-steps-section strat -->
+    <section class="work-steps-section section-padding border-top">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-7">
+            <div class="section-header text-center">
+              <h2 class="section-title">how NairaRoll works</h2>
+            </div>
+          </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="work-steps-items-part d-flex">
+              <div class="line"><img src="assets/images/elements/line.png" alt="line-image"></div>
+              <div class="work-steps-item">
+                <div class="work-steps-item-inner">
+                  <div class="icon"><img src="assets/images/svg-icons/how-work-icons/1.svg" alt="icon">
+                    <span class="count-num">01</span></div>
+                  <h4 class="title">choose</h4>
+                  <p>Choose your game mode & roll your dice</p>
+                </div>
+              </div><!-- work-steps-item end -->
+              <div class="work-steps-item">
+                <div class="work-steps-item-inner">
+                  <div class="icon"><img src="assets/images/svg-icons/how-work-icons/2.svg" alt="icon">
+                    <span class="count-num">02</span></div>
+                  <h4 class="title">wait</h4>
+                  <p>Wait for the system or other users to play</p>
+                </div>
+              </div><!-- work-steps-item end -->
+              <div class="work-steps-item">
+                <div class="work-steps-item-inner">
+                  <div class="icon"><img src="assets/images/svg-icons/how-work-icons/3.svg" alt="icon">
+                    <span class="count-num">03</span></div>
+                  <h4 class="title">win</h4>
+                  <p>Save your earnings and keep playing</p>
+                </div>
+              </div><!-- work-steps-item end -->
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="work-steps-thumb-part">
+              <img src="assets/images/elements/step.png" alt="work-step-image">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- work-steps-section strat -->
+
+    <!-- affiliate-section start -->
+    <section class="affiliate-section section-padding">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="section-header text-center">
+              <h2 class="section-title">Affiliate Programs</h2>
+              <p>Tell A Friend is our unique friends promotion club that enables you to earn amazing bonus money rewards for inviting friends to play on NairaRoll!</p>
+            </div>
+          </div>
+        </div>
+        <div class="row m-bottom-not-30">
+          <div class="col-lg-3 col-sm-6">
+            <div class="affiliate-item text-center">
+              <div class="icon">
+                <div class="icon-inner">
+                  <img src="assets/images/svg-icons/affiliate-icons/1.svg" alt="icon">
+                </div>
+              </div>
+              <div class="content">
+                <h4 class="title">High Revenues</h4>
+                <p>We offer the best commissions in the market and provide proven excellent rewards.</p>
+              </div>
+            </div>
+          </div><!-- affiliate-item end -->
+          <div class="col-lg-3 col-sm-6">
+            <div class="affiliate-item text-center">
+              <div class="icon">
+                <div class="icon-inner">
+                  <img src="assets/images/svg-icons/affiliate-icons/4.svg" alt="icon">
+                </div>
+              </div>
+              <div class="content">
+                <h4 class="title">Reliable Payments</h4>
+                <p>Payments are made anytime you want via a variety of payment methods.</p>
+              </div>
+            </div>
+          </div><!-- affiliate-item end -->
+          <div class="col-lg-3 col-sm-6">
+            <div class="affiliate-item text-center">
+              <div class="icon">
+                <div class="icon-inner">
+                  <img src="assets/images/svg-icons/affiliate-icons/2.svg" alt="icon">
+                </div>
+              </div>
+              <div class="content">
+                <h4 class="title">Unlimited Affiliates</h4>
+                <p>There is no limit for your number of affiliates and no earning limit.</p>
+              </div>
+            </div>
+          </div><!-- affiliate-item end -->
+          <div class="col-lg-3 col-sm-6">
+            <div class="affiliate-item text-center">
+              <div class="icon">
+                <div class="icon-inner">
+                  <img src="assets/images/svg-icons/affiliate-icons/3.svg" alt="icon">
+                </div>
+              </div>
+              <div class="content">
+                <h4 class="title">Dedicated Support</h4>
+                <p>Our dedicated technical support team works with you to understand and identify any problems you come across.</p>
+              </div>
+            </div>
+          </div><!-- affiliate-item end -->
+        </div>
+      </div>
+    </section>
+    <!-- affiliate-section end -->
+
+    <!-- payment-method-section start -->
+    <section class="payment-method-section section-padding border-top">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <div class="section-header text-center">
+              <h2 class="section-title">Payment Methods</h2>
+              <p>A wide variety of payment methods are supported on NairaRoll. Play now and win big!</p>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="payment-method-area d-flex">
+              <div class="payment-item">
+                <a href="#"><img src="assets/images/payment-methods/1.jpg" alt="payment-method-image"></a>
+              </div><!-- payment-item end -->
+              <div class="payment-item">
+                <a href="#"><img src="assets/images/payment-methods/2.jpg" alt="payment-method-image"></a>
+              </div><!-- payment-item end -->
+              <div class="payment-item">
+                <a href="#"><img src="assets/images/payment-methods/3.jpg" alt="payment-method-image"></a>
+              </div><!-- payment-item end -->
+              <div class="payment-item">
+                <a href="#"><img src="assets/images/payment-methods/4.jpg" alt="payment-method-image"></a>
+              </div><!-- payment-item end -->
+              <div class="payment-item">
+                <a href="#"><img src="assets/images/payment-methods/5.jpg" alt="payment-method-image"></a>
+              </div><!-- payment-item end -->
+              <div class="payment-item">
+                <a href="#"><img src="assets/images/payment-methods/6.jpg" alt="payment-method-image"></a>
+              </div><!-- payment-item end -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- payment-method-section end -->
+
+    <!-- active-user-section start -->
+    <section class="active-user-section section-padding section-bg">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="section-header text-center">
+              <h2 class="section-title">NairaRoll Numbers</h2>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-4">
+            <div class="active-item text-center">
+              <span class="amount">5 k</span>
+              <p>Total Registered players</p>
+            </div>
+          </div><!-- active-item end -->
+          <div class="col-lg-4 col-md-4">
+            <div class="active-item text-center">
+              <span class="amount">100 K</span>
+              <p>Total Games Played</p>
+            </div>
+          </div><!-- active-item end -->
+          <div class="col-lg-4 col-md-4">
+            <div class="active-item text-center">
+              <span class="amount">#100 M</span>
+              <p>Total in payouts</p>
+            </div>
+          </div><!-- active-item end -->
+          <div class="col-lg-12 text-center">
+            <a href="#" class="cmn-btn">Join Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- active-user-section end -->
+
+    <!-- testimonial-section start -->
+    <section class="testimonial-section section-padding">
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col-lg-6">
+            <div class="testimonial-content">
+              <h5 class="sub-title">What our users think about us</h5>
+              <h2 class="title">User Testimonials</h2>
+              <div class="total-ratings">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <span class="ratings-count-num">3K Reviews</span>
+              </div>
+              <p>With over 5 years of experience as an online dice gaming service provider, NairaRoll has catered to thousands of users. Find out what our members have to say about us! </p>
+              <div class="testimonial-slider-arrows d-flex">
+                <div class="button-next"><i class="fa fa-angle-left" aria-hidden="true"></i></div>
+                <div class="button-prev"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="testimonial-slider swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="testimonial-slide">
+                    <div class="testimonial-slide-header d-flex">
+                      <div class="client-thumb">
+                        <img src="assets/images/testimonial/1.png" alt="image">
+                      </div>
+                      <div class="client-details">
+                        <h5 class="name">Albert G.</h5>
+                        <div class="ratings">
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <span>5.00</span>
+                        </div>
+                        <p><span class="place">France</span><span class="date">&nbsp;22nd April, 2020</span></p>
+                      </div>
+                    </div>
+                    <div class="testimonial-slide-body">
+                      <p>I've played with NairaRoll for several years and really appreciate the site. All of my wins have been credited to my account. Thanks to the entire team at  NairaRoll!"</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="testimonial-slide">
+                    <div class="testimonial-slide-header d-flex">
+                      <div class="client-thumb">
+                        <img src="assets/images/testimonial/2.png" alt="image">
+                      </div>
+                      <div class="client-details">
+                        <h5 class="name">Edward L.</h5>
+                        <div class="ratings">
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <span>5.00</span>
+                        </div>
+                        <p><span class="place">France</span><span class="date">&nbsp;22nd April, 2020</span></p>
+                      </div>
+                    </div>
+                    <div class="testimonial-slide-body">
+                      <p>I've played with NairaRoll for several years and really appreciate the site. All of my wins have been credited to my account. Thanks to the entire team at  NairaRoll!"</p>
+                    </div>
+                  </div>
+                </div><!--swiper-slide end -->
+                <div class="swiper-slide">
+                  <div class="testimonial-slide">
+                    <div class="testimonial-slide-header d-flex">
+                      <div class="client-thumb">
+                        <img src="assets/images/testimonial/1.png" alt="image">
+                      </div>
+                      <div class="client-details">
+                        <h5 class="name">Albert G.</h5>
+                        <div class="ratings">
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <span>5.00</span>
+                        </div>
+                        <p><span class="place">France</span><span class="date">&nbsp;22nd April, 2020</span></p>
+                      </div>
+                    </div>
+                    <div class="testimonial-slide-body">
+                      <p>I've played with NairaRoll for several years and really appreciate the site. All of my wins have been credited to my account. Thanks to the entire team at  NairaRoll!"</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="testimonial-slide">
+                    <div class="testimonial-slide-header d-flex">
+                      <div class="client-thumb">
+                        <img src="assets/images/testimonial/2.png" alt="image">
+                      </div>
+                      <div class="client-details">
+                        <h5 class="name">Edward L.</h5>
+                        <div class="ratings">
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <span>5.00</span>
+                        </div>
+                        <p><span class="place">France</span><span class="date">&nbsp;22nd April, 2020</span></p>
+                      </div>
+                    </div>
+                    <div class="testimonial-slide-body">
+                      <p>I've played with NairaRoll for several years and really appreciate the site. All of my wins have been credited to my account. Thanks to the entire team at  NairaRoll!"</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="testimonial-slide">
+                    <div class="testimonial-slide-header d-flex">
+                      <div class="client-thumb">
+                        <img src="assets/images/testimonial/1.png" alt="image">
+                      </div>
+                      <div class="client-details">
+                        <h5 class="name">Albert G.</h5>
+                        <div class="ratings">
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <span>5.00</span>
+                        </div>
+                        <p><span class="place">France</span><span class="date">&nbsp;22nd April, 2020</span></p>
+                      </div>
+                    </div>
+                    <div class="testimonial-slide-body">
+                      <p>I've played with NairaRoll for several years and really appreciate the site. All of my wins have been credited to my account. Thanks to the entire team at  NairaRoll!"</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- testimonial-section end -->
+
+    <!-- contact-section start -->
+    <section class="contact-section overflow-hidden has_bg_image" data-background="assets/images/dark-bg-three.jpg">
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col-lg-6">
+            <div class="section-header text-center">
+              <h2 class="section-title text-uppercase">Contact us</h2>
+              <p>If you have any questions or queries our helpful support team will be more than happy to assist.</p>
+            </div>
+            <div class="contact-form-area">
+              <form class="contact-form">
+                <div class="form-grp">
+                  <input type="text" name="contact_name" id="contact_name" placeholder="Full Name">
+                </div>
+                <div class="form-grp">
+                  <input type="email" name="contact_email" id="contact_email" placeholder="Email Address">
+                </div>
+                <div class="form-grp">
+                  <textarea name="contact_message" id="contact_message" placeholder="Message"></textarea>
+                </div>
+                <div class="form-grp">
+                  <input class="submit-btn" type="submit" value="send message">
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="contact-thumb">
+              <img src="assets/images/elements/contact.png" alt="image">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- contact-section end -->
+
+    <!-- footer-section start -->
+    <footer class="footer-section">
+      <div class="footer-top has_bg_image" data-background="assets/images/dark-bg-four.jpg">
+        <div class="footer-top-first">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6 col-md-5 col-sm-4 text-center text-sm-left">
+                <a href="#" class="site-logo">NairaRoll</a>
+              </div>
+              <div class="col-lg-6 col-md-7 col-sm-8">
+                <div class="number-count-part d-flex">
+                  <div class="number-count-item">
+                    <span class="number">5,682</span>
+                    <p>TOTAL MEMBERS</p>
+                  </div>
+                  <div class="number-count-item">
+                    <span class="number">100,384</span>
+                    <p>TOTAL winners</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-top-second">
+          <div class="container">
+            <div class="row justify-content-between">
+              <div class="col-xl-2 col-lg-3 col-md-3 col-sm-6">
+                <div class="footer-widget widget-about">
+                  <h3 class="widget-title">About Us</h3>
+                  <ul class="footer-list-menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">How it Works</a></li>
+                    <li><a href="#">Our services</a></li>
+                    <li><a href="#">Game Results</a></li>
+                    <li><a href="#">Contact us</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-xl-2 col-lg-3 col-md-3 col-sm-6">
+                <div class="footer-widget widget-links">
+                  <h3 class="widget-title">Quick links</h3>
+                  <ul class="footer-list-menu">
+                    <li><a href="#">My Account</a></li>
+                    <li><a href="#">Affiliate Program</a></li>
+                    <li><a href="#">FAQ's</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                <div class="footer-widget widget-subscribe">
+                  <h3 class="widget-title">email newsletters</h3>
+                  <div class="subscribe-part">
+                    <p>Subscribe now and receive weekly newsletter for latest draw and offer news and much more!</p>
+                    <form class="subscribe-form">
+                      <input type="email" name="subs_email" id="subs_email" placeholder="Email address">
+                      <input type="submit" value="subscribe">
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom border-top">
+        <div class="container">
+          <div class="row justify-content-between align-items-center">
+            <div class="col-lg-6 col-sm-7">
+              <div class="copy-right-text">
+                <p>&copy; <script>document.write(new Date().getFullYear())</script> <a href="#">NairaRoll</a> - All Rights Reserved.</p>
+              </div>
+            </div>
+            <div class="col-lg-6 col-sm-5">
+              <ul class="footer-social-links d-flex justify-content-end">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer-section end -->
+  </div>
+
+  <!-- scroll-to-top start -->
+  <div class="scroll-to-top">
+    <span class="scroll-icon">
+      <i class="fa fa-angle-up"></i>
+    </span>
+  </div>
+  <!-- scroll-to-top end -->
+
+  <!-- jquery library js file -->
+  <script src="assets/js/jquery-3.3.1.min.js"></script>
+  <!-- bootstrap js file -->
+  <script src="assets/js/bootstrap.min.js"></script>
+  <!-- flipclock js file -->
+  <script src="assets/js/flipclock.min.js"></script>
+  <!-- countdown js file -->
+  <script src="assets/js/jquery.countdown.min.js"></script>
+  <!-- slick js file -->
+  <script src="assets/js/slick.min.js"></script>
+  <!-- swiper js file -->
+  <script src="assets/js/swiper.min.js"></script>
+  <!-- lightcase js file -->
+  <script src="assets/js/lightcase.js"></script>
+  <!-- wow js file -->
+  <script src="assets/js/wow.min.js"></script>
+  <!-- main script js file -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>NairaRoll | Online Dice Gaming Platform | Roll Dice to win money</title>
+  <!-- site favicon -->
+  <link rel="shortcut icon" type="image/png" href="assets/images/favicon.jpg">
+  <!-- fontawesome css link -->
+  <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+  <!-- bootstrap css link -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <!-- animate css link -->
+  <link rel="stylesheet" href="assets/css/animate.css">
+  <!-- lightcase css link -->
+  <link rel="stylesheet" href="assets/css/lightcase.css">
+  <!-- slick css link -->
+  <link rel="stylesheet" href="assets/css/slick.css">
+  <!-- swiper css link -->
+  <link rel="stylesheet" href="assets/css/swiper.min.css">
+  <!-- flipclock css link -->
+  <link rel="stylesheet" href="assets/css/flipclock.css">
+  <!-- main style css link -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- dark version css -->
+  <link rel="stylesheet" href="assets/css/dark-version.css">
+  <!-- responsive css link -->
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body>
+
+  <!-- preloader start -->
+  <div id="preloader"></div>
+  <!-- preloader end -->
+
+  <div class="main-dark-version">
+    <!--  header-section start  -->
+    <header class="header-section">
+      <div class="header-bottom">
+        <div class="container">
+          <nav class="navbar navbar-expand-xl">
+            <a class="site-logo site-title" href="#">NairaRoll</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="menu-toggle"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav main-menu ml-auto">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">How It works</a></li>
+                <li><a href="#">Results</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+              <div class="header-join-part">
+                <button type="button" class="cmn-btn" data-toggle="modal" data-target="#loginModal">join us</button>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div><!-- header-bottom end -->
+    </header>
+    <!--  header-section end  -->
+
+    <!--login registration Modal -->
+    <div class="modal fade login-registration-modal" id="loginModal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content row" style="width: auto">
+          <div class="modal-body">
+            <div class="login-registration-area">
+              <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" id="login-tab" data-toggle="tab" href="#login" role="tab" aria-controls="login" aria-selected="true">Login</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="registration-tab" data-toggle="tab" href="#registration" role="tab" aria-controls="registration" aria-selected="false">Register</a>
+                </li>
+              </ul>
+              <div class="tab-content">
+                <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+                  <form class="login-form cmn-frm">
+                    <div class="frm-group">
+                      <label>Email Address</label>
+                      <input type="email" name="login_email" id="login_email" placeholder="Enter Email Address">
+                      <i class="fa fa-user"></i>
+                    </div>
+                    <div class="frm-group">
+                      <label>Password</label>
+                      <input type="password" name="login_pass" id="login_pass" placeholder="Enter Password">
+                      <i class="fa fa-lock"></i>
+                    </div>
+                    <div class="frm-group">
+                      <input type="submit" name="registration_submit2" id="registration_submit2" value="login">
+                    </div>
+                    <div class="frm-group" align="center">
+                      <a style="color: #000" id="reset-tab" data-toggle="tab" href="#reset" role="tab" aria-controls="reset" aria-selected="false">Forgot Password?</a>
+                    </div>
+                  </form>
+                </div>
+                <div class="tab-pane fade" id="registration" role="tabpanel" aria-labelledby="registration-tab">
+                  <form class="registration-form cmn-frm">
+                    <div class="frm-group">
+                      <label>Email Address</label>
+                      <input type="email" name="registration_email" id="registration_email" placeholder="Enter Email Address">
+                      <i class="fa fa-user"></i>
+                    </div>
+                    <div class="frm-group">
+                      <label>Password</label>
+                      <input type="password" name="registration_pass" id="registration_pass" placeholder="Enter Password">
+                      <i class="fa fa-lock"></i>
+                    </div>
+                    <div class="frm-group">
+                      <label>Confirm Password</label>
+                      <input type="password" name="registration_re_pass" id="registration_re_pass" placeholder="Enter Password Confirmation">
+                      <i class="fa fa-lock"></i>
+                    </div>
+                    <div class="frm-group">
+                      <input type="submit" name="registration_submit" id="registration_submit" value="Register">
+                    </div>
+                  </form>
+                </div>
+                <div class="tab-pane fade" id="reset" role="tabpanel" aria-labelledby="forgot-tab">
+                  <form class="registration-form cmn-frm">
+                    <div class="frm-group">
+                      <label>Email Address</label>
+                      <input type="email" name="registration_email" id="registration_email" placeholder="Enter Email Address">
+                      <i class="fa fa-user"></i>
+                    </div>
+                    <div class="frm-group">
+                      <input type="submit" name="reset_submit" id="reset_submit" value="Reset Password">
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- inner-page-banner start -->
+    <section class="inner-page-banner has_bg_image" data-background="assets/images/01.jpg">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="inner-page-banner-area">
+              <h1 class="page-title">Affiliate Program</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- inner-page-banner end -->
+
+    <!-- affiliate-section start -->
+    <section class="affiliate-section section-padding">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-7">
+            <div class="section-header text-center">
+              <h2 class="section-title">Affiliate Programs</h2>
+              <p>Tell A Friend is our unique friends promotion club that enables you to earn amazing bonus money rewards for inviting friends to play on NairaRoll!</p>
+            </div>
+          </div>
+        </div>
+        <div class="row affiliate-single justify-content-between">
+          <div class="col-lg-5">
+            <div class="affiliate-content">
+                <div class="icon">
+                  <div class="icon-inner">
+                    <img src="assets/images/svg-icons/affiliate-icons/1.svg" alt="icon">
+                  </div>
+                </div>
+                <div class="content">
+                  <h3 class="title">High Revenues</h3>
+                  <p>We offer the best commissions in the market and provide proven conversions.As our ongoing partner, you will receive a revenue share of between 10%-15%, depending on the number of players that you refer. The more traffic you send, the more revenue you earn for all of your player portfolio with us.</p>
+                </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="affiliate-thumb">
+              <img src="assets/images/affiliate/1.png" alt="image">
+            </div>
+          </div>
+        </div>
+        <div class="row affiliate-single justify-content-between">
+          <div class="col-lg-5">
+            <div class="affiliate-content">
+                <div class="icon">
+                  <div class="icon-inner">
+                    <img src="assets/images/svg-icons/affiliate-icons/4.svg" alt="icon">
+                  </div>
+                </div>
+                <div class="content">
+                  <h3 class="title">Reliable Payments</h3>
+                  <p>Payments are made monthly via a variety of  payment methods.Payments made monthly via a variety of payment methods to your choice including: bank transfer, NETeller, Skrill, PayPal, WebMoney and more.</p>
+                </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="affiliate-thumb">
+              <img src="assets/images/affiliate/2.png" alt="image">
+            </div>
+          </div>
+        </div>
+        <div class="row affiliate-single justify-content-between">
+          <div class="col-lg-5">
+            <div class="affiliate-content">
+                <div class="icon">
+                  <div class="icon-inner">
+                    <img src="assets/images/svg-icons/affiliate-icons/2.svg" alt="icon">
+                  </div>
+                </div>
+                <div class="content">
+                  <h3 class="title">Unlimited Affiliates</h3>
+                  <p>There is no limit  for your number of affiliates and no earning limit. </p>
+                </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="affiliate-thumb">
+              <img src="assets/images/affiliate/3.png" alt="image">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- affiliate-section end -->
+
+    <!-- payment-method-section start -->
+    <section class="payment-method-section section-padding border-top">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <div class="section-header text-center">
+              <h2 class="section-title">Payment Methods</h2>
+              <p>A wide variety of payment methods are supported on NairaRoll. Play now and win big!</p>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="payment-method-area d-flex">
+              <div class="payment-item">
+                <a href="#"><img src="assets/images/payment-methods/1.jpg" alt="payment-method-image"></a>
+              </div><!-- payment-item end -->
+              <div class="payment-item">
+                <a href="#"><img src="assets/images/payment-methods/2.jpg" alt="payment-method-image"></a>
+              </div><!-- payment-item end -->
+              <div class="payment-item">
+                <a href="#"><img src="assets/images/payment-methods/3.jpg" alt="payment-method-image"></a>
+              </div><!-- payment-item end -->
+              <div class="payment-item">
+                <a href="#"><img src="assets/images/payment-methods/4.jpg" alt="payment-method-image"></a>
+              </div><!-- payment-item end -->
+              <div class="payment-item">
+                <a href="#"><img src="assets/images/payment-methods/5.jpg" alt="payment-method-image"></a>
+              </div><!-- payment-item end -->
+              <div class="payment-item">
+                <a href="#"><img src="assets/images/payment-methods/6.jpg" alt="payment-method-image"></a>
+              </div><!-- payment-item end -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- payment-method-section end -->
+
+    <!-- join-section start -->
+    <section class="join-section section-padding section-bg border-top">
+      <div class="container">
+        <div class="row m-bottom-not-30">
+          <div class="col-lg-6">
+            <div class="join-item text-center">
+              <h3 class="title">Become an affiliate today</h3>
+              <p>The affiliate program is our special feature for loyal customers. Are you ready to start making money and earning? Join today and become an affiliate!</p>
+              <a href="#" class="cmn-btn">join now!</a>
+            </div>
+          </div><!-- join-item end -->
+          <div class="col-lg-6">
+            <div class="join-item text-center">
+              <h3 class="title">Get Your referral Link</h3>
+              <p>Invite users & you will receive a revenue share of 5% of every money they earn on the platform. The more people you invite, the more revenue you earn.</p>
+              <a href="#" class="cmn-btn">join now!</a>
+            </div>
+          </div><!-- join-item end -->
+        </div>
+      </div>
+    </section>
+    <!-- join-section end -->
+
+    <!-- testimonial-section start -->
+    <section class="testimonial-section section-padding border-top">
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col-lg-6">
+            <div class="testimonial-content">
+              <h5>What they think about us</h5>
+              <h2>Testimonials</h2>
+              <div class="total-ratings">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <span class="ratings-count-num">3.4M Reviews</span>
+              </div>
+              <p>With over 12 years of experience as the world’s leading online lottery service provider, Sorteo has catered to over a million users. Find out what our members have to say about us! </p>
+              <div class="testimonial-slider-arrows d-flex">
+                <div class="button-next"><i class="fa fa-angle-left" aria-hidden="true"></i></div>
+                <div class="button-prev"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="testimonial-slider swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="testimonial-slide">
+                    <div class="testimonial-slide-header d-flex">
+                      <div class="client-thumb">
+                        <img src="assets/images/testimonial/1.png" alt="image">
+                      </div>
+                      <div class="client-details">
+                        <h5 class="name">Albert G.</h5>
+                        <div class="ratings">
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <span>5.00</span>
+                        </div>
+                        <p><span class="place">France</span><span class="date">15th June, 2018</span></p>
+                      </div>
+                    </div>
+                    <div class="testimonial-slide-body">
+                      <p>I've played with Sorteo for several years and really appreciate the site. All of my wins have been credited to my account. Thanks to the entire team at  Sorteo!"</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="testimonial-slide">
+                    <div class="testimonial-slide-header d-flex">
+                      <div class="client-thumb">
+                        <img src="assets/images/testimonial/1.png" alt="image">
+                      </div>
+                      <div class="client-details">
+                        <h5 class="name">Albert G.</h5>
+                        <div class="ratings">
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <span>5.00</span>
+                        </div>
+                        <p><span class="place">France</span><span class="date">15th June, 2018</span></p>
+                      </div>
+                    </div>
+                    <div class="testimonial-slide-body">
+                      <p>I've played with Sorteo for several years and really appreciate the site. All of my wins have been credited to my account. Thanks to the entire team at  Sorteo!"</p>
+                    </div>
+                  </div>
+                </div><!--swiper-slide end -->
+                <div class="swiper-slide">
+                  <div class="testimonial-slide">
+                    <div class="testimonial-slide-header d-flex">
+                      <div class="client-thumb">
+                        <img src="assets/images/testimonial/1.png" alt="image">
+                      </div>
+                      <div class="client-details">
+                        <h5 class="name">Albert G.</h5>
+                        <div class="ratings">
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <span>5.00</span>
+                        </div>
+                        <p><span class="place">France</span><span class="date">15th June, 2018</span></p>
+                      </div>
+                    </div>
+                    <div class="testimonial-slide-body">
+                      <p>I've played with Sorteo for several years and really appreciate the site. All of my wins have been credited to my account. Thanks to the entire team at  Sorteo!"</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="testimonial-slide">
+                    <div class="testimonial-slide-header d-flex">
+                      <div class="client-thumb">
+                        <img src="assets/images/testimonial/1.png" alt="image">
+                      </div>
+                      <div class="client-details">
+                        <h5 class="name">Albert G.</h5>
+                        <div class="ratings">
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <span>5.00</span>
+                        </div>
+                        <p><span class="place">France</span><span class="date">15th June, 2018</span></p>
+                      </div>
+                    </div>
+                    <div class="testimonial-slide-body">
+                      <p>I've played with Sorteo for several years and really appreciate the site. All of my wins have been credited to my account. Thanks to the entire team at  Sorteo!"</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="testimonial-slide">
+                    <div class="testimonial-slide-header d-flex">
+                      <div class="client-thumb">
+                        <img src="assets/images/testimonial/1.png" alt="image">
+                      </div>
+                      <div class="client-details">
+                        <h5 class="name">Albert G.</h5>
+                        <div class="ratings">
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <span>5.00</span>
+                        </div>
+                        <p><span class="place">France</span><span class="date">15th June, 2018</span></p>
+                      </div>
+                    </div>
+                    <div class="testimonial-slide-body">
+                      <p>I've played with Sorteo for several years and really appreciate the site. All of my wins have been credited to my account. Thanks to the entire team at  Sorteo!"</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- testimonial-section end -->
+
+    <!-- footer-section start -->
+    <footer class="footer-section">
+      <div class="footer-top has_bg_image" data-background="assets/images/dark-bg-four.jpg">
+        <div class="footer-top-first">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6 col-md-5 col-sm-4 text-center text-sm-left">
+                <a href="#" class="site-logo">NairaRoll</a>
+              </div>
+              <div class="col-lg-6 col-md-7 col-sm-8">
+                <div class="number-count-part d-flex">
+                  <div class="number-count-item">
+                    <span class="number">5,682</span>
+                    <p>TOTAL MEMBERS</p>
+                  </div>
+                  <div class="number-count-item">
+                    <span class="number">100,384</span>
+                    <p>TOTAL winners</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-top-second">
+          <div class="container">
+            <div class="row justify-content-between">
+              <div class="col-xl-2 col-lg-3 col-md-3 col-sm-6">
+                <div class="footer-widget widget-about">
+                  <h3 class="widget-title">About Us</h3>
+                  <ul class="footer-list-menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">How it Works</a></li>
+                    <li><a href="#">Our services</a></li>
+                    <li><a href="#">Game Results</a></li>
+                    <li><a href="#">Contact us</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-xl-2 col-lg-3 col-md-3 col-sm-6">
+                <div class="footer-widget widget-links">
+                  <h3 class="widget-title">Quick links</h3>
+                  <ul class="footer-list-menu">
+                    <li><a href="#">My Account</a></li>
+                    <li><a href="#">Affiliate Program</a></li>
+                    <li><a href="#">FAQ's</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                <div class="footer-widget widget-subscribe">
+                  <h3 class="widget-title">email newsletters</h3>
+                  <div class="subscribe-part">
+                    <p>Subscribe now and receive weekly newsletter for latest draw and offer news and much more!</p>
+                    <form class="subscribe-form">
+                      <input type="email" name="subs_email" id="subs_email" placeholder="Email address">
+                      <input type="submit" value="subscribe">
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom border-top">
+        <div class="container">
+          <div class="row justify-content-between align-items-center">
+            <div class="col-lg-6 col-sm-7">
+              <div class="copy-right-text">
+                <p>&copy; <script>document.write(new Date().getFullYear())</script> <a href="#">NairaRoll</a> - All Rights Reserved.</p>
+              </div>
+            </div>
+            <div class="col-lg-6 col-sm-5">
+              <ul class="footer-social-links d-flex justify-content-end">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer-section end -->
+  </div>
+
+  <!-- scroll-to-top start -->
+  <div class="scroll-to-top">
+    <span class="scroll-icon">
+      <i class="fa fa-angle-up"></i>
+    </span>
+  </div>
+  <!-- scroll-to-top end -->
+
+  <!-- jquery library js file -->
+  <script src="assets/js/jquery-3.3.1.min.js"></script>
+  <!-- bootstrap js file -->
+  <script src="assets/js/bootstrap.min.js"></script>
+  <!-- flipclock js file -->
+  <script src="assets/js/flipclock.min.js"></script>
+  <!-- countdown js file -->
+  <script src="assets/js/jquery.countdown.min.js"></script>
+  <!-- slick js file -->
+  <script src="assets/js/slick.min.js"></script>
+  <!-- swiper js file -->
+  <script src="assets/js/swiper.min.js"></script>
+  <!-- lightcase js file -->
+  <script src="assets/js/lightcase.js"></script>
+  <!-- wow js file -->
+  <script src="assets/js/wow.min.js"></script>
+  <!-- main script js file -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
